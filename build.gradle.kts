@@ -42,5 +42,9 @@ sonarqube {
         property("sonar.host.url", "http://localhost:9000")
 
         property("sonar.token", "sqa_99170e4256bdd6f6e2e03f25b7a87decfea28350")
+        property(
+            "sonar.exclusions",
+            "**/build.gradle,**/build.gradle.kts,**/settings.gradle,**/settings.gradle.kts"
+        )
     }
 }

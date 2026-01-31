@@ -39,6 +39,10 @@ sonarqube {
     properties {
         property("sonar.projectKey", "gradle-demo")
         property("sonar.projectName", "gradle-demo")
-        property("sonar.host.url", "http://localhost:9000")
+        property("sonar.java.binaries", "build/classes/java/main")
+        property(
+            "sonar.coverage.jacoco.xmlReportPaths",
+            "build/reports/jacoco/test/jacocoTestReport.xml"
+        )
     }
 }

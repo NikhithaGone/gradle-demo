@@ -2,6 +2,7 @@ plugins {
     java
     application
     jacoco
+    id("org.sonarqube") version "5.0.0.4638"
 }
 
 group = "com.bits"
@@ -32,5 +33,12 @@ tasks.jacocoTestReport {
         html.required.set(true)
         xml.required.set(true)
         csv.required.set(false)
+    }
+}
+sonarqube {
+    properties {
+        property("sonar.projectKey", "gradle-demo")
+        property("sonar.projectName", "gradle-demo")
+        property("sonar.host.url", "http://localhost:9000")
     }
 }

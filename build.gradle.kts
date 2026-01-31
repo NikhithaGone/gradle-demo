@@ -43,7 +43,7 @@ sonarqube {
 
         property(
             "sonar.token",
-            System.getenv("SONAR_TOKEN")
+            System.getenv("jenkins sonar token")
         )
     }
 }

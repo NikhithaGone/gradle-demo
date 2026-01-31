@@ -41,9 +41,6 @@ sonarqube {
         property("sonar.projectName", "gradle-demo")
         property("sonar.host.url", "http://localhost:9000")
 
-        property(
-            "sonar.token",
-            System.getenv("jenkins sonar token")
-        )
+        property("sonar.token", "sqa_99170e4256bdd6f6e2e03f25b7a87decfea28350")
     }
 }
